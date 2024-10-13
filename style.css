@@ -19,7 +19,6 @@ header {
     position: relative; /* Hozzáadva a pozicionáláshoz */
     border-bottom: solid 5px #ffb813;
 }
-
 header nav {
     display: flex;
     align-items: center; /* Igazítás középre */
@@ -33,14 +32,14 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 30px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: large;
+    font-size: 120%;
 }
 
 .hero {
@@ -92,9 +91,7 @@ header nav ul li a {
     font-size: 150%;
     line-height: 1.4
 }
-.c1img{
 
-}
 .c1img img{
     width: 100%;
 }
@@ -103,6 +100,7 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+    margin-top:0px ;
 }
 
 /* Hamburger menü alapértelmezett állapotban elrejtve */
@@ -170,4 +168,16 @@ footer {
     .hero p {
         font-size: 1rem;
     }
+}
+/* Alaphelyzetben a tartalom átlátszó */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Ha a tartalom a látható területen van, akkor animálva lesz */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
